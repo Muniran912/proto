@@ -1,43 +1,108 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="proto.Site1" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="BulletLineC.Default" %>
+
 
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
-    <title>  
-        <asp:ContentPlaceHolder ID="ContentPlaceHolderTitle" runat="server">
-    </asp:ContentPlaceHolder></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
-    <link href="~/css/Styles.css" rel="stylesheet" type="text/css" runat="server">
+    <title></title>
+<style type="text/css">
+        .all
+        {
+            background-color:green;
+            border-radius: 0% 50% 50% 0% / 0% 50% 50% 0%;
 
+            position:relative;
+            bottom:20px;
+            left:1px;
+            text-align:left;
+            color:white;
+            float:left;
+        }
+    </style>
 </head>
-<body>
-    <div id ="header">
-    <h1> 
-        <asp:ContentPlaceHolder ID="ContentPlaceHolderH1" runat="server">
-            </asp:ContentPlaceHolder> 
+    <body style="background-color:#242424">
+        <form id="form1" runat="server">
+            <div>
+                <table style="width:1100px; margin:0 auto; background-color:white">
+                   
+                    <tr style="width:1100px; height:50px; border-color:#5f98f3; background-color:white">
+                        <td>
+                        <asp:Image ID="Image1" runat="server" Height="100px"
+                            ImageUrl="~/image/BulletLogo.jpg" Width="150px" BorderColor="#666666" BorderWidth="2px" /></td>
+                        <td style="width:740px" align="center">
+                            <asp:Label ID="Label1" runat="server" Text="Bullet Line | Wresting Merchandise Shop"
+                                Font-Bold="true" Font-Names="Copperplate Gothic Bold"
+                                ForeColor="RoyalBlue" Font-Size="35px"></asp:Label>
+                            <br /><b> Welcome to The Bullet Club !!! </b>
+                        </td>
+                        <td style="width:230px; text-align:right">
+                            <asp:ImageButton ID="ImageButton1" runat="server" Height="50px" style=" text-align:left"
+                                ImageUrl="~/image/Cart.jpg" Width="50px" CausesValidation="False"
+                                onclick="ImageButton1_Click" />
+                            <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="X-Large"
+                                ForeColor="#5F98BF3"></asp:Label>
+                                </td>
+                       </tr>
 
-    </h1>
-        </div>
 
-<div id="menu">
-<ul>
-<li><a href="~/index.aspx" runat="server">Home</a></li>
-<li><a href="~/about.aspx" runat="server">About</a></li>
-<li><a href="~/contact.aspx" runat="server">Contact Us</a></li>
-<li><a href="~/members/index.aspx" runat="server">Members</a></li>
-</ul>
-</div>
+                    <tr style=" width:1100px; height=40px; background-color:#5f98f3">
+                        <td colspan="3" style=" text-align:right">
+                            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal"
+                                StaticSubMenuIndent="19px">
+                                <Items>
+                                    <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                                    <asp:MenuItem Text="All Products" Value="All Products"
+                                        NavigateUrl="~/index.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Registration" Value="Registration"
+                                        NavigateUrl="~/Register.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="User Login" Value="User Login"
+                                        NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="About Us" Value="About Us"></asp:MenuItem>
+                                    <asp:MenuItem Text="Contact Us" Value="Contact Us"></asp:MenuItem>
+                                </Items>
+                                <StaticHoverStyle BackColor="#FF6666" BorderColor="#FF6666"
+                                    BorderStyle="Outset" ForeColor="White" Height="40px" />
+                                <StaticMenuItemStyle Font-Bold="true" Font-Size="Large" ForeColor="Black"
+                                    HorizontalPadding="54px" />
+                                <StaticSelectedStyle BackColor="#FF5050" BorderColor="#FF6666"
+                                    BorderStyle="Inset" ForeColor="#666666" Height="40px" />
+                            </asp:Menu>
+                        </td>
+                        </tr>
 
-    <h2><asp:ContentPlaceHolder ID="ContentPlaceHolderH2" runat="server">
-            </asp:ContentPlaceHolder> </h2>
-    <form id="form1" runat="server">
-        <div>
+                    <tr style=" width:1110px; height:310px;">
+                        <td colspan="3">
+                            <asp:ScriptManager ID="ScriptManager1" runat="server">
+                            </asp:ScriptManager>
+                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                <ContentTemplate>
+                                    <asp:Timer ID="Timer1" runat="server" Interval="2000" OnTick="Timer1_Tick">
+                                    </asp:Timer>
+                                    <asp:Image ID="Image2" runat="server" BackColor="White" BorderColor="Gray"
+                                        BorderStyle="Double" Height="270px" Width="1140px" ImageAlign="Middle" />
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                        </td>
+                    </tr>
 
-            <asp:ContentPlaceHolder ID="ContentPlaceHolderBodyContent" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
-    </form>
-</body>
+
+                    <tr>
+                        <td colspan="3">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                            </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+
+                    <tr style=" width:1100px; height:25px; background-color:black; text-align:center; color:white">
+                        <td colspan="3">
+                            &copy; Bullet Line | Wrestling Merchandise Shop <a href="http://validator.w3.org/check?uri=referer">Validate HTML</a> |<a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>| <a href="Admin/">Admin</a>
+                        </td>
+                    </tr>
+                    </table>
+                </div>
+            </form>
+                </body>
+
 </html>

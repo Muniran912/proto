@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace proto
+namespace proto.admin
 {
 
 
-    public partial class about
+    public partial class index
     {
     }
 }

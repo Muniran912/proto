@@ -21,7 +21,7 @@ namespace proto
 
             //create mail client and message with to and from address, and set message subject and body
             SmtpClient smtpClient = new SmtpClient();
-            MailMessage msg = new MailMessage("a.muncey@chester.ac.uk", "a.muncey@chester.ac.uk");
+            MailMessage msg = new MailMessage("vileax912@gmail.com", "vileax912@gmail.com");
             msg.Subject = txtSubject.Text;
             msg.Body = txtBody.Text;
 
@@ -31,9 +31,9 @@ namespace proto
             smtpClient.EnableSsl = true;
 
             //create credentials - e.g. username and password for the account
-            System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("vileax@gmail.com", "vileax912912912");
+            System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("vileax912@gmail.com", "Vileax912912912");
             smtpClient.Credentials = credentials;
-            msg = new MailMessage("CO5027demo@gmail.com", "a.muncey@chester.ac.uk");
+            //msg = new MailMessage("vileax912@gmail.com", "vileax912@gmail.com");
 
 
             try

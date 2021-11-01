@@ -17,9 +17,10 @@
             <asp:TextBox ID="txtRegPassword" runat="server" TextMode="Password"></asp:TextBox>
             <br />
             <br />
-            <asp:Button ID="btnRegister" runat="server"  Text="Register" />
+            <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click2" />
             <br />
             <asp:Literal ID="litRegisterError" runat="server"></asp:Literal>
+            <br />
         </div>
     </form>
 </body>

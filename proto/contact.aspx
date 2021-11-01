@@ -70,5 +70,5 @@
                 
             }
         </script>
-        <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=AgsrZNzkGefBb5DhANNOj6gHmzClrCL4dbz0iM-vclUgga3twHsIN-uRXnWbTtMrYourBingMapsKey&callback=loadMapScenario' async defer></script>
+        <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=AjtUzWJBHlI3Ma_Ke6Qv2fGRXEs0ua5hUQi54ECwfXTiWsitll4AkETZDihjcfeI&callback=loadMapScenario' async defer></script>
 </asp:Content>
